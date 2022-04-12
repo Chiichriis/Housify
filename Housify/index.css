@@ -1,0 +1,598 @@
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --gray: #e5e5e5;
+    --white: #ffffff;
+    --blue: linear-gradient(180deg, #82D7F1 0%, #1F7AC6 100%);
+    --black: #363637;
+}
+
+body{
+    background-color: var(--gray);
+}
+.home{
+    height: 100vh;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 1.5rem 0;
+}
+
+/* Creating the hamburger */
+.burger-section{
+    position: relative;
+}
+.toggle{
+    height: 35px;
+    width: 35px;
+    position: relative;
+    opacity: 0;
+    z-index: 2;
+}
+.hamburger{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hamburger>div{
+    height: 3px;
+    position: relative;
+    background-color: var(--black);
+    width: 100%;
+    border-radius: .5rem;
+    transition: ease .5s;
+}
+.hamburger>div:before,
+.hamburger>div::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: .5rem;
+}
+.hamburger>div::before{
+    transform: translateY(-8.5px);
+}
+.hamburger>div::after{
+    transform: translateY(8.5px);
+}
+
+/* Rotating the hamburger */
+.toggle:checked + .hamburger>div{
+    transform: rotate(45deg);
+}
+.toggle:checked + .hamburger>div::before{
+    transform: rotate(90deg);
+}
+.toggle:checked + .hamburger>div::after{
+    transform: rotate(90deg);
+}
+
+/* The Legacy Logo-section */
+.logo-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-section img{
+    padding: .2rem;
+}
+.logo-section p{
+    font-size: .7rem;
+    font-family: Raleway;
+    color: var(--black);
+}
+
+/* The hero section of the design */
+.hero{
+    margin: .5rem;
+    height: 55vh;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: relative;
+}
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-slide div{
+    position: absolute;
+    top: 35%;
+    left: 4rem;
+    color: var(--white);
+}
+.swiper-slide div h3{
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+.swiper-slide div p{
+    font-family: sans-serif;
+    text-align: right;
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    color: var(--white);
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.5rem;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--white);
+}
+
+/* The hero text section */
+.hero-text{
+    font-family: Raleway;
+    font-size: .9rem;
+    text-align: center;
+    padding: 0 2rem 0;
+    margin: 1.5rem 0 0;
+    color: var(--black);
+}
+.hero-text p{
+    margin: .7rem 0 0;
+}
+
+/* The product section */
+.product-section{
+    background-color: var(--black);
+    padding: 1rem 0 1rem;
+}
+.product-section-header{
+    text-align: center;
+    color: var(--white);
+    padding: 1rem 0 ;
+}
+.product-section-header .main-text{
+    font-family: Raleway;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.product-section-header .sub-text{
+    font-family: sans-serif;
+    font-size: .9rem;
+    padding: .2rem 0;
+}
+.product-section-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 1.5rem;
+}
+.product-section-logo p{
+    text-align: center;
+    font-family: Raleway;
+    color: var(--white);
+    font-size: .9rem;
+    padding: .2rem 1.5rem;
+}
+
+/* the grid area unde the product section */
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem;
+    grid-gap: 1rem;
+}
+.grid-elements{
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Raleway;
+}
+.grid-elements h3{
+    font-size: 1rem;
+    padding: .5rem 0;
+}
+.grid-elements p{
+    font-size: .7rem;
+    padding: .2rem 0;
+}
+
+/* The housify section */
+.housify-section-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 0;
+    text-align: center;
+    font-family: Raleway;
+    font-size: .7rem;
+}
+.housify-section-header p{
+    font-size: .9rem;
+    padding: .2rem 1.5rem;
+    color: var(--black);
+}
+/* The grid container design for the housify section */
+.housify-grid{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 1rem;
+    grid-gap: 1rem;
+    padding: 2rem 1rem;
+}
+.housify-grid-element{
+    color: var(--black);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Raleway;
+}
+.housify-grid-element h3{
+    font-size: 1rem;
+    padding: .5rem 0;
+    font-weight: 700;
+}
+.housify-grid-element p{
+    font-size: .7rem;
+    padding: .2rem 0;
+}
+
+/* The companies section */
+.companies-section{
+    background-color: var(--black);
+    margin: 1.5rem 0 0;
+    padding: 1rem 0 1rem;
+}
+.companies-section-header{
+    text-align: center;
+    color: var(--white);
+    padding: 1rem 0 ;
+}
+.companies-section-header .main-text{
+    font-family: Raleway;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+.companies-section-header .sub-text{
+    font-family: sans-serif;
+    font-size: .9rem;
+    padding: .2rem 0;
+}
+/* The companies section grid */
+.companies-grid{
+    display: grid;
+    grid-template-columns: 35% 65%;
+    grid-row-gap: 3rem;
+    grid-column-gap: 2rem;
+    padding: 1.5rem 0;
+}
+.grid-el{
+    color: var(--gray);
+    align-items: center;
+    font-family: Raleway;
+}
+.img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+    position: relative;
+}
+
+.img p{
+    font-size: .6rem;
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    font-family: Raleway;
+}
+
+.txt{
+    font-size: .9rem;
+    border-left: solid var(--white);
+    margin-right: 2rem;
+}
+.txt p{
+    padding: 1rem;
+}
+.txt p b{
+    color: var(--white);
+}
+.social-handles{
+    display: inline-block;
+    align-items: center;
+    margin: -.2rem 1rem .5rem;
+    font-size: 1rem;
+    color: var(--white);
+}
+.social-handles i{
+    margin-right: .3rem;
+}
+
+/* The executives section */
+.executives-section{
+    padding: 1.5rem 0 0;
+}
+.executives-section-header{
+    text-align: center;
+    font-size: .9rem;
+    color: var(--black);
+    font-family: Raleway;
+    font-weight: 700;
+}
+.executive-profiles{
+    margin: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.executive{
+    padding: 1rem;
+}
+.executive img{
+    width: 10rem;
+    height: auto;
+    border-radius: .1rem;
+}
+.executive-name{
+    font-family: Raleway;
+    font-size: .9rem;
+    margin: .7rem 0 0;
+    color: var(--black);
+}
+.executive-name b{
+    font-weight: 700;
+}
+.executive-position{
+    font-size: .7rem;
+    font-family: Raleway;
+    color: var(--black);
+}
+.footer-txt{
+    color: var(--black);
+    font-family: Raleway;
+    font-size: .9rem;
+    text-align: center;
+    padding: 1rem 00;
+    font-weight: 700;
+}
+.footer-txt i{
+    margin-right: .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Desktop Design */
+@media (min-width: 800px) {
+    .header{
+        margin: 2rem 5.5rem 0;
+    }
+    .logo-section p{
+        font-size: 1rem;
+    }
+
+    /* The hero section */
+    .hero{
+        margin: 1rem 3.2rem 0;
+        height: 70vh;
+    }
+    .swiper-slide div{
+        position: absolute;
+        top: 35%;
+        left: 30%;
+        color: var(--white);
+    }
+    .swiper-slide div h3{
+        font-size: 2.5rem;
+    }
+    .swiper-slide div p{
+        font-size: 1rem;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+    font-size: 2rem;
+    }
+    .hero-text{
+        font-size: 1rem;
+        padding: 0 7rem 0;
+        margin: 2.2rem 0 0;
+    }
+    .hero-text p{
+        margin: 1rem 0 0;
+    }
+
+    /* The product section */
+    .product-section{
+        padding: 1rem 2.2rem 1rem;
+    }
+    .product-section-header .main-text{
+        font-size: 2.1rem;
+    }
+    .product-section-header .sub-text{
+        font-size: 1rem;
+    }
+    .product-section-logo{
+        padding: 1rem 0 3rem;
+    }
+    .product-section-logo img{
+        height: 6rem;
+        width: auto;
+    }
+    .product-section-logo p{
+        font-size: 1rem;
+        padding: .2rem 10rem;
+    }
+
+    /* The product section Grid */
+    .grid-container{
+        padding: 2rem;
+        grid-row-gap: 3rem;
+        grid-column-gap: 1rem;
+    }
+    .grid-elements h3{
+        font-size: 1rem;
+        padding: .5rem 0;
+    }
+    .grid-elements p{
+        font-size: .8rem;
+        padding: .5rem 7rem;
+    }
+
+    /* The Housify section */
+    .housify-section-header{
+        padding: 2rem 0 0;
+        font-size: 1rem;
+    }
+    .housify-section-header img{
+        height: 6rem;
+        width: auto;
+    }
+    .housify-section-header p{
+        padding: .5rem 10rem;
+        margin: 1rem 5rem;
+    }
+    /* The grid container design for the housify section */
+    .housify-grid{
+        padding: 2rem;
+        margin: 0 5rem;
+        grid-gap: 3rem;
+        padding: 2rem 1rem;
+    }
+    .housify-grid-element{
+        justify-content: center;
+        align-items: center;
+        font-family: Raleway;
+    }
+    .housify-grid-element h3{
+        font-size: 1.2rem;
+        padding: .5rem 0;
+    }
+    .housify-grid-element p{
+        font-size: .8rem;
+        padding: .2rem 5rem;
+    }
+
+    /* The companies section */
+    .companies-section{
+        margin: 2rem 0 0;
+        padding: 1.5rem 0 1rem;
+    }
+    .companies-section-header .main-text{
+        font-size: 2.1rem;
+    }
+    .companies-section-header .sub-text{
+        font-size: 1rem;
+    }
+    
+    /* Companies section grid */
+    .companies-grid{
+        grid-row-gap: .1rem;
+        grid-column-gap: 2.5rem;
+        padding: 2rem 2rem;
+    } 
+    .img img{
+        height: auto;
+        width: 100%;
+    }
+    .img p{
+        font-size: .7rem;
+        top: 60%;
+    }
+    #txt{
+        margin: 2.5rem 0 0;
+    }
+    
+    .txt{
+        font-size: 1rem;
+        padding-right: 7rem;
+        margin: 4rem 0;
+        margin-right: 1rem;
+    }
+    .txt p{
+        padding: 1rem 3rem;
+        font-size: 1rem;
+    }
+    .social-handles{
+        margin: -.2rem 3rem .5rem;
+        font-size: 1.3rem;
+    }
+    
+    /* The Executives section */
+    .executives-section{
+        padding: 2.5rem 0 0;
+    }
+    .executives-section-header{
+        font-size: 1.2rem;
+    }
+    .executive-profiles{
+        margin: 2rem 1rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-left: 5rem;
+    }
+    .executive{
+        display: flex;
+        flex-direction: column;
+    }
+    .executive img{
+        width: 12rem;
+        height: auto;
+        border-radius: .1rem;
+    }
+    .executive-name{
+        font-size: 1rem;
+    }
+    .executive-position{
+        font-size: .8rem;
+    }
+    .footer-txt{
+        font-size: 1.2rem;
+    }
+    .footer-txt i{
+        font-size: 1.2rem;
+    }
+}
