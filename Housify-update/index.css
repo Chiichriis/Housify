@@ -1,0 +1,535 @@
+@font-face {
+    font-family: Raleway;
+    src: url(fonts/Raleway-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+:root{
+    --gray: #efefef;
+    --white: #ffffff;
+    --black: #363637;
+    --blue: linear-gradient(180deg, #1F7AC6 0%, #0E398C 100%);
+    --shadow: 0 0 1rem .1rem rgb(15, 15, 15);
+}
+.home{
+    height: 100vh;
+}
+/* The Header section */
+.header{
+    background-color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    padding: 0 1.5rem;
+    box-shadow: var(--shadow);
+    z-index: 2;
+}
+.header p{
+    font-family: Raleway;
+    font-size: .8rem;
+}
+.header img{
+    height: 4rem;
+    width: auto;
+}
+
+/* Creating the Hamburger */
+.toggle{
+    position: relative;
+    height: 35px;
+    width: 35px;
+    z-index: 1;
+    opacity: 0;
+}
+.menu{
+    position: relative;
+}
+/* The nav menu */
+.nav{
+    visibility: hidden;
+    position: absolute;
+    background-color: var(--white);
+    margin: 1.4rem 0 0;
+    height: 100vh;
+    width: calc(100vw - 3rem);
+    justify-content: center;
+    padding: 0 1rem 0;
+    border-radius: .3rem;
+}
+.nav ul{
+    list-style-type: none;
+    margin: 1rem 0 0;
+}
+.nav ul li{
+    padding: .25rem .5rem;
+    background-color: var(--gray);
+    margin: 1rem 0 0;
+    border-radius: .3rem;
+}
+.nav ul li a{
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: .9rem;
+    display: block;
+    color: var(--blue);
+    padding: 1rem 0;
+}
+
+.hamburger{
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+.hamburger>div{
+    height: 4px;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: .1rem;
+    position: relative;
+    transition: ease .2s;
+}
+.hamburger>div::before,
+.hamburger>div::after{
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: var(--black);
+    border-radius: .1rem;
+    position: absolute;
+}
+.hamburger>div::before{
+    transform: translateY(-9px);
+}
+.hamburger>div::after{
+    transform: translateY(9px);
+}
+
+/* Animating the Hamburger */
+.toggle:checked + .hamburger>div{
+    transform: rotate(45deg);
+}
+.toggle:checked + .hamburger>div::before{
+    transform: rotate(90deg);
+}
+.toggle:checked + .hamburger>div::after{
+    transform: rotate(90deg);
+}
+
+/* Connecting the Hamburger to the nav */
+.toggle:checked ~ .nav{
+    visibility: visible;
+}
+
+/* The Jumbotron section */
+.jumbotron{
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    position: relative;
+    top: 5rem;
+    padding: 0;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.slide-content{
+    display: block;
+    height: 25rem;
+    width: 100%;
+    background-image: url(images/mobile/Remodeling\ the\ Universe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-family: Raleway;
+    font-weight: 700;
+}
+.slide-content h1{
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+}
+.item2{
+    background-image: url(images/mobile/Connected\ Solutions\ .jpg);
+}
+.item3{
+    background-image: url(images/mobile/Immersive\ Technologies.jpg);
+}
+.item4{
+    background-image: url(images/mobile/Simplifying\ Data.jpg);
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next{
+    color: var(--white);
+    margin: 0 .5rem 0;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 1.9rem;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--white);
+}
+
+.section-paragraph{
+ margin: 5.7rem 1rem 0;   
+ text-align: justify;
+ font-family: Raleway;
+ font-size: .9rem;
+ color: var(--black);
+ padding: .1rem;
+}
+.section-paragraph p{
+    margin: 0 0 .1rem;
+    padding: .5rem;
+}
+
+/* The Digital Product section */
+.digital-product{
+    background-image: var(--blue);
+    margin: 1rem 0 0;
+    padding: 1rem 0;
+}
+.section-header{
+    background-color: inherit;
+    text-align: center;
+    color: var(--white);
+    border: none;
+    border-radius: .3rem;
+    padding: .5rem;
+    margin: 1rem 5rem 0;
+    box-shadow: var(--shadow);
+}
+.section-header h1{
+    font-size: 1.2rem;
+    font-family: Raleway;
+    font-weight: 700; 
+}
+.section-header p{
+    font-size: .75rem;
+    font-family: sans-serif;
+    padding: .1rem 0 0;
+}
+.product-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0 0;
+    font-family: Raleway;
+}
+.product-section img{
+    height: 6rem;
+    width: auto;
+}
+.product-section h3{
+    color: var(--white);
+    padding: .5rem 1rem 0;
+}
+.product-section p{
+    text-align: center;
+    padding: 1rem 1rem 0;
+    font-size: .9rem;
+    color: var(--white);
+}
+
+/* The sections grid */
+.grid-container{
+    margin: 1rem 1rem 0;
+    padding: 1rem;
+}
+.gridEl{
+    margin: 0 0 2rem;
+    border-bottom: solid var(--white);
+    border-width: .1rem;
+    padding: .5rem .1rem;
+}
+.gridEl-img{
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin: 0 1rem 0;
+}
+.gridEl-txt{
+    font-family: Raleway;
+    color: var(--white);
+}
+.gridEl-txt h4{
+    font-weight: 700;
+    padding: 1rem 0 .5rem;
+}.gridEl-txt p{
+    font-size: .8rem;
+    text-align: justify;
+}
+.section-btn{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    border-radius: 1rem;
+    font-family: Raleway;
+    padding: .4rem .7rem;
+    font-size: 1rem;
+    color: var(--white);
+    border: solid var(--white);
+    border-width: .1rem;
+    background-color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERY FOR THE DESKTOP */
+
+/* The Header Section */
+@media (min-width: 800px) {
+    .header{
+        height: 5.2rem;
+        padding: 0 7rem;
+    }
+    .header img{
+        height: 5rem;
+    }
+    .header p{
+        font-size: 1.2rem;
+    }
+    .nav{
+        width: calc(100vw - 14rem);
+        margin: 1.5rem 0 0;
+        padding: 0 1.5rem 0;
+    }
+    .nav ul{
+        margin: 1.5rem 0 0;
+    }
+    .nav ul li{
+        margin: 1.5rem 0 0;
+    }
+    .nav ul li a{
+        font-size: 1rem;
+    }
+
+    /* The Jumbotron section */
+    .jumbotron{
+        top: 5.2rem;
+        margin: 0 4rem 0;
+    }
+    .slide-content{
+        height: 28rem;
+        background-image: url(images/Remodeling\ the\ Universe.jpg);
+        
+    }
+    .slide-content h1{
+        font-size: 1.9rem;
+    }
+    .item2{
+        background-image: url(images/Connected\ Solutions\ .jpg);
+    }
+    .item3{
+        background-image: url(images/Immersive\ Technologies.jpg);
+    }
+    .item4{
+        background-image: url(images/Simplifying\ Data.jpg);
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+        margin: 0 2rem 0;
+    }
+    .swiper-button-prev::after,
+    .swiper-button-next::after{
+        font-size: 2.7rem;
+    }
+    .section-paragraph{
+        margin: 6.2rem 7rem 0;   
+        font-size: 1.1rem;
+        padding: 0 7rem 0;
+       }
+    .section-paragraph p{
+        margin: 0 0 .5rem;
+    }
+}
+
+/* The Digital Product section */
+@media (min-width: 800px) {
+    .digital-product{
+        margin: 2rem 0 0;
+        padding: 3rem 7rem;
+    }
+    .section-header{
+        padding: 1rem;
+        margin: 1rem 20rem;
+    }
+    .section-header h1{
+        font-size: 1.9rem;
+        font-family: Raleway;
+        font-weight: 700; 
+    }
+    .section-header p{
+        font-size: .9rem;
+        font-family: sans-serif;
+        padding: .3rem 0 0;
+    }
+    
+    .product-section{
+        margin: 4.5rem 0 0;
+    }
+    .product-section img{
+        height: 10rem;
+    }
+    .product-section h3{
+        padding: 1.2rem 1rem;
+        font-size: 1.7rem;
+    }
+    .product-section p{
+        padding: 1rem 9rem;
+        font-size: 1.1rem;
+    }
+    
+    /* Section Grid */
+    .grid-container{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+        grid-gap: 5rem;
+        justify-content: center;
+    }
+    .gridEl{
+        margin: 0;
+        padding: 1rem .1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .gridEl-img{
+        padding: 1rem;
+        width: 5.5rem;
+        height: 5.5rem;
+        margin: 0 1rem 0;
+    }
+    .gridEl-img img{
+        height: 3rem;
+        width: auto;
+    }
+    .gridEl-txt{
+        text-align: center;
+    }
+    .gridEl-txt h4{
+        font-size: 1.3rem;
+        padding: 1.5rem 0 .7rem;
+    }.gridEl-txt p{
+        font-size: .9rem;
+    }
+    .section-btn{
+        margin: 3rem 0 0;
+    }
+    .btn{
+        border-radius: 1rem;
+        font-family: Raleway;
+        padding: .7rem 1.2rem;
+        font-size: 1.2rem;
+    }
+    .btn:hover{
+        background-color: var(--white);
+        color: var(--black);
+        transition: ease-in-out .2s;
+    }
+}
