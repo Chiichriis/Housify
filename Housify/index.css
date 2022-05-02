@@ -1,40 +1,82 @@
 @font-face {
-    font-family: Raleway;
-    src: url(fonts/Raleway-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: Montserrat;
-    src: url(fonts/Montserrat-VariableFont_wght.ttf);
+    font-family: Roboto;
+    src: url(Roboto-Regular.ttf);
 }
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 :root{
-    --gray: #e5e5e5;
-    --white: #ffffff;
-    --blue: linear-gradient(180deg, #82D7F1 0%, #1F7AC6 100%);
-    --black: #363637;
+    --shadow: 0 0 1.1rem .1rem rgb(15, 15, 15);
+    --primary-blue: #003b46;
+    --dark-blue: #07575b;
+    --blue: #61a4ad;
+    --light-blue: #c0dee5;
+    --gray: rgb(223, 223, 223);
+
 }
 
-body{
-    background-color: var(--gray);
-}
-.home{
-    height: 100vh;
-}
+/* The header section */
 .header{
+    position: fixed;
+    width: 100%;
+    height: 5rem;
     display: flex;
     justify-content: space-between;
-    margin: 1rem 1.5rem 0;
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+    background-color: var(--light-blue);
+    z-index: 2;
+}
+.header-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 .5rem 0;
+}
+.header-logo img{
+    height: 4rem;
+    width: auto;
 }
 
-/* Creating the hamburger */
-.burger-section{
-    position: relative;
+.nav{
+    visibility: hidden;
+    background-color: var(--light-blue);
+    position: absolute;
+    top: 4.1rem;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: Roboto;
+    transition:  ease .2s;
 }
+.nav ul{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+.nav ul li{
+    margin: 2rem 0 0;
+    display: block;
+    border-bottom: solid var(--primary-blue);
+    border-width: .1rem;
+    padding: .5rem;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: var(--primary-blue);
+    display: block;
+}
+/* Creating the hamburger */
+.header-menu{
+    position: relative;
+    padding: 0 2rem;
+}
+
 .toggle{
     height: 35px;
     width: 35px;
@@ -52,9 +94,9 @@ body{
     justify-content: center;
 }
 .hamburger>div{
-    height: 3px;
+    height: 4px;
     position: relative;
-    background-color: var(--black);
+    background-color: var(--primary-blue);
     width: 100%;
     border-radius: .5rem;
     transition: ease .5s;
@@ -63,9 +105,9 @@ body{
 .hamburger>div::after{
     content: '';
     position: absolute;
-    height: 3px;
+    height: 4px;
     width: 100%;
-    background-color: var(--black);
+    background-color: var(--primary-blue);
     border-radius: .5rem;
 }
 .hamburger>div::before{
@@ -86,513 +128,372 @@ body{
     transform: rotate(90deg);
 }
 
-/* The Legacy Logo-section */
-.logo-section{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.logo-section img{
-    padding: .2rem;
-}
-.logo-section p{
-    font-size: .7rem;
-    font-family: Raleway;
-    color: var(--black);
+/* Connecting the Hamburger to the nav */
+.toggle:checked ~ .nav{
+    visibility: visible;
 }
 
-/* The hero section of the design */
-.hero{
-    margin: .5rem;
-    height: 55vh;
-}
 .swiper {
+    position: relative;
+    top: 5rem;
     width: 100%;
-    height: 100%;
+    height: 88vh;
 }
+
 .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
     position: relative;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
 }
-  .swiper-slide img {
+
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.swiper-slide div{
+
+.slider-txt{
     position: absolute;
-    top: 35%;
-    left: 4rem;
-    color: var(--white);
-}
-.swiper-slide div h3{
-    font-family: Raleway;
-    font-weight: 700;
-    font-size: 1.2rem;
-}
-.swiper-slide div p{
-    font-family: sans-serif;
-    text-align: right;
-    font-size: .7rem;
-    line-height: 1.2rem;
-}
-.swiper-button-prev,
-.swiper-button-next{
-    color: var(--white);
-}
-.swiper-button-prev::after,
-.swiper-button-next::after{
-    font-size: 1.5rem;
-}
-.swiper-pagination-bullet-active{
-    background-color: var(--white);
-}
-
-/* The hero text section */
-.hero-text{
-    font-family: Raleway;
-    font-size: .9rem;
-    text-align: center;
-    padding: 0 2rem 0;
-    margin: 1.5rem 0 0;
-    color: var(--black);
-}
-.hero-text p{
-    margin: .7rem 0 0;
-}
-
-/* The product section */
-.product-section{
-    background-color: var(--black);
-    padding: 1rem 0 1rem;
-}
-.product-section-header{
-    text-align: center;
-    color: var(--white);
-    padding: 1rem 0 ;
-}
-.product-section-header .main-text{
-    font-family: Raleway;
-    font-size: 1.7rem;
-    font-weight: 400;
-}
-.product-section-header .sub-text{
-    font-family: sans-serif;
-    font-size: .9rem;
-    padding: .2rem 0;
-}
-.product-section-logo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0 0 1.5rem;
-}
-.product-section-logo p{
-    text-align: center;
-    font-family: Raleway;
-    color: var(--white);
-    font-size: .9rem;
-    padding: .2rem 1.5rem;
-}
-
-/* the grid area unde the product section */
-.grid-container{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    font-family: Roboto;
     padding: 1rem;
-    grid-gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.75);
 }
-.grid-elements{
-    color: var(--white);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Raleway;
-}
-.grid-elements h3{
-    font-size: 1rem;
-    padding: .5rem 0;
-}
-.grid-elements p{
-    font-size: .7rem;
-    padding: .2rem 0;
-}
-
-/* The housify section */
-.housify-section-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0 0;
-    text-align: center;
-    font-family: Raleway;
-    font-size: .7rem;
-}
-.housify-section-header p{
-    font-size: .9rem;
-    padding: .2rem 1.5rem;
-    color: var(--black);
-}
-/* The grid container design for the housify section */
-.housify-grid{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: 1rem;
-    grid-gap: 1rem;
-    padding: 2rem 1rem;
-}
-.housify-grid-element{
-    color: var(--black);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Raleway;
-}
-.housify-grid-element h3{
-    font-size: 1rem;
-    padding: .5rem 0;
-    font-weight: 700;
-}
-.housify-grid-element p{
-    font-size: .7rem;
-    padding: .2rem 0;
-}
-
-/* The companies section */
-.companies-section{
-    background-color: var(--black);
-    margin: 1.5rem 0 0;
-    padding: 1rem 0 1rem;
-}
-.companies-section-header{
-    text-align: center;
-    color: var(--white);
-    padding: 1rem 0 ;
-}
-.companies-section-header .main-text{
-    font-family: Raleway;
-    font-size: 1.7rem;
-    font-weight: 400;
-}
-.companies-section-header .sub-text{
-    font-family: sans-serif;
-    font-size: .9rem;
-    padding: .2rem 0;
-}
-/* The companies section grid */
-.companies-grid{
-    display: grid;
-    grid-template-columns: 35% 65%;
-    grid-row-gap: 3rem;
-    grid-column-gap: 2rem;
-    padding: 1.5rem 0;
-}
-.grid-el{
-    color: var(--gray);
-    align-items: center;
-    font-family: Raleway;
-}
-.img{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-left: .5rem;
-    position: relative;
-}
-
-.img p{
-    font-size: .6rem;
-    position: absolute;
-    top: 60%;
-    text-align: center;
-    font-family: Raleway;
-}
-
-.txt{
-    font-size: .9rem;
-    border-left: solid var(--white);
-    margin-right: 2rem;
-}
-.txt p{
-    padding: 1rem;
-}
-.txt p b{
-    color: var(--white);
-}
-.social-handles{
-    display: inline-block;
-    align-items: center;
-    margin: -.2rem 1rem .5rem;
-    font-size: 1rem;
-    color: var(--white);
-}
-.social-handles i{
-    margin-right: .3rem;
-}
-
-/* The executives section */
-.executives-section{
-    padding: 1.5rem 0 0;
-}
-.executives-section-header{
-    text-align: center;
-    font-size: .9rem;
-    color: var(--black);
-    font-family: Raleway;
-    font-weight: 700;
-}
-.executive-profiles{
-    margin: 1rem 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.executive{
-    padding: 1rem;
-}
-.executive img{
-    width: 10rem;
-    height: auto;
-    border-radius: .1rem;
-}
-.executive-name{
-    font-family: Raleway;
-    font-size: .9rem;
-    margin: .7rem 0 0;
-    color: var(--black);
-}
-.executive-name b{
-    font-weight: 700;
-}
-.executive-position{
-    font-size: .7rem;
-    font-family: Raleway;
-    color: var(--black);
-}
-.footer-txt{
-    color: var(--black);
-    font-family: Raleway;
-    font-size: .9rem;
-    text-align: center;
-    padding: 1rem 00;
-    font-weight: 700;
-}
-.footer-txt i{
-    margin-right: .5rem;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* The Desktop Design */
-@media (min-width: 800px) {
-    .header{
-        margin: 2rem 5.5rem 0;
-    }
-    .logo-section p{
-        font-size: 1rem;
-    }
-
-    /* The hero section */
-    .hero{
-        margin: 1rem 3.2rem 0;
-        height: 70vh;
-    }
-    .swiper-slide div{
-        position: absolute;
-        top: 35%;
-        left: 30%;
-        color: var(--white);
-    }
-    .swiper-slide div h3{
-        font-size: 2.5rem;
-    }
-    .swiper-slide div p{
-        font-size: 1rem;
-    }
-    .swiper-button-prev::after,
-    .swiper-button-next::after{
+.slider-txt h1{
+    text-align: left;
     font-size: 2rem;
-    }
-    .hero-text{
-        font-size: 1rem;
-        padding: 0 7rem 0;
-        margin: 2.2rem 0 0;
-    }
-    .hero-text p{
-        margin: 1rem 0 0;
-    }
+    padding: 1rem 0;
+    color: var(--primary-blue);
+}
+.slider-txt .home-header::before{
+    content: 'welcome to church';
+    background-color: var(--blue);
+    color: var(--dark-blue);
+    border-radius: .3rem;
+    font-size: .8rem;
+    padding: .5rem;
+    margin: 0 0 .5rem;
+    display: block;
+    width: 7rem;
+}
+.slider-txt p{
+    text-align: left;
+    font-size: .9rem;
+    color: var(--dark-blue);
+}
 
-    /* The product section */
-    .product-section{
-        padding: 1rem 2.2rem 1rem;
-    }
-    .product-section-header .main-text{
-        font-size: 2.1rem;
-    }
-    .product-section-header .sub-text{
-        font-size: 1rem;
-    }
-    .product-section-logo{
-        padding: 1rem 0 3rem;
-    }
-    .product-section-logo img{
+.btn-container{
+    margin: 2rem 0 0;
+    display: flex;
+}
+button{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    font-family: Roboto;
+    background-color: inherit;
+    border: solid var(--primary-blue);
+    border-width: .1rem;
+    margin-right: 1rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    border-radius: .3rem;
+}
+.active{
+    background-color: var(--light-blue);
+}
+
+/* The Sermons section */
+.sermons{
+    padding: 1rem 1rem 0;
+    margin: 5rem 0 0;
+}
+.sermons-heading{
+    margin: 1rem 0 0;
+    font-family: Roboto;
+    text-align: center;
+    color: var(--primary-blue);
+}
+.sermons-grid{
+    margin: 1rem 0;
+}
+.sermons-gridEl{
+    background-color: var(--light-blue);
+    padding: 1rem 1rem 1.5rem;
+    border-radius: .3rem;
+    font-family: Roboto;
+    margin: 0 0 1rem;
+}
+.sermons-gridEl h3{
+    color: var(--dark-blue);
+    margin: 0 0 .5rem;
+    font-size: 1rem;
+}
+.sermons-gridEl p{
+    color: var(--dark-blue);
+    margin: 0 0 1.5rem;
+    font-size: .8rem;
+}
+.sermons-gridEl a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .7rem;
+    color: var(--primary-blue);
+    border: solid var(--dark-blue);
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border-width: .1rem;
+}
+
+/* The Department section */
+.departments{
+    background-color: var(--gray);
+    padding: 1rem 1rem .5rem;
+}
+.departments-heading{
+    margin: 1rem 0 0;
+    font-family: Roboto;
+    text-align: center;
+    color: var(--primary-blue);
+}
+.departments-grid{
+    margin: 1rem 0 0;
+}
+.departments-gridEl{
+    border: solid var(--blue);
+    border-width: .1rem;
+    border-radius: .3rem;
+    font-family: Roboto;
+    margin: 0 0 1rem;
+}
+.departments-gridEl img{
+    width: 100%;
+    height: auto;
+    border-radius: .3rem;
+}
+.departments-gridEl h3{
+    color: var(--primary-blue);
+    margin: 1rem 0 .5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+.departments-gridEl p{
+    color: var(--dark-blue);
+    margin: 0 0 1rem;
+    font-size: .8rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* THE DESKTOP VERSION DESIGN */
+@media (min-width:800px) {
+
+    /* The header section */
+    .header{
         height: 6rem;
-        width: auto;
+        display: flex;
+        justify-content: space-between;
     }
-    .product-section-logo p{
-        font-size: 1rem;
-        padding: .2rem 10rem;
+    .header-logo{
+        margin: 0 2.5rem 0;
     }
-
-    /* The product section Grid */
-    .grid-container{
-        padding: 2rem;
-        grid-row-gap: 3rem;
-        grid-column-gap: 1rem;
+    .header-logo img{
+        height: 5rem;
     }
-    .grid-elements h3{
-        font-size: 1rem;
-        padding: .5rem 0;
-    }
-    .grid-elements p{
-        font-size: .8rem;
-        padding: .5rem 7rem;
-    }
-
-    /* The Housify section */
-    .housify-section-header{
-        padding: 2rem 0 0;
-        font-size: 1rem;
-    }
-    .housify-section-header img{
-        height: 6rem;
-        width: auto;
-    }
-    .housify-section-header p{
-        padding: .5rem 10rem;
-        margin: 1rem 5rem;
-    }
-    /* The grid container design for the housify section */
-    .housify-grid{
-        padding: 2rem;
-        margin: 0 5rem;
-        grid-gap: 3rem;
-        padding: 2rem 1rem;
-    }
-    .housify-grid-element{
+    .header-menu{
+        margin: 0 3rem 0;
+        padding: 0;
+        position: static;
+        display: flex;
         justify-content: center;
         align-items: center;
-        font-family: Raleway;
     }
-    .housify-grid-element h3{
-        font-size: 1.2rem;
-        padding: .5rem 0;
+    .toggle,
+    .hamburger{
+        display: none;
     }
-    .housify-grid-element p{
-        font-size: .8rem;
-        padding: .2rem 5rem;
+    .nav{
+        visibility: visible;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        position: inherit;
+    }
+    .nav ul{
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+    }
+    .nav ul li{
+        border: none;
+        margin: 0 1rem;
+        padding: .3rem;
+        font-size: 1rem;
+    }
+    .nav ul li:hover{
+        border-bottom: solid var(--dark-blue);
+        border-width: .1rem;
     }
 
-    /* The companies section */
-    .companies-section{
-        margin: 2rem 0 0;
-        padding: 1.5rem 0 1rem;
+    /* The swiper Section */
+    .slider-txt{
+        width: 50%;
+        border-radius: .3rem;
     }
-    .companies-section-header .main-text{
-        font-size: 2.1rem;
+    .slider-txt h1{
+        font-size: 2.2rem;
     }
-    .companies-section-header .sub-text{
+    .slider-txt .home-header::before{
+        font-size: .9rem;
+        margin: 0 0 .7rem;
+        width: 8rem;
+    }
+    .slider-txt p{
+        text-align: left;
         font-size: 1rem;
+        color: var(--dark-blue);
     }
-    
-    /* Companies section grid */
-    .companies-grid{
-        grid-row-gap: .1rem;
-        grid-column-gap: 2.5rem;
-        padding: 2rem 2rem;
-    } 
-    .img img{
-        height: auto;
-        width: 100%;
+
+    /* The Sermons Section */
+    .sermons{
+        padding: 1rem 6rem 0;
+        margin: 6.5rem 0 0;
     }
-    .img p{
-        font-size: .7rem;
-        top: 60%;
+    .sermons-heading{
+        font-size: xx-large;
     }
-    #txt{
-        margin: 2.5rem 0 0;
+    .sermons-grid{
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 1.5rem;
     }
-    
-    .txt{
-        font-size: 1rem;
-        padding-right: 7rem;
-        margin: 4rem 0;
-        margin-right: 1rem;
+    .sermons-gridEl{
+        padding: 1.5rem 1.5rem 1.5rem;
+        margin: 0;
     }
-    .txt p{
-        padding: 1rem 3rem;
-        font-size: 1rem;
-    }
-    .social-handles{
-        margin: -.2rem 3rem .5rem;
-        font-size: 1.3rem;
-    }
-    
-    /* The Executives section */
-    .executives-section{
-        padding: 2.5rem 0 0;
-    }
-    .executives-section-header{
+    .sermons-gridEl h3{
+        margin: 0 0 .5rem;
         font-size: 1.2rem;
     }
-    .executive-profiles{
-        margin: 2rem 1rem;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        margin-left: 5rem;
-    }
-    .executive{
-        display: flex;
-        flex-direction: column;
-    }
-    .executive img{
-        width: 12rem;
-        height: auto;
-        border-radius: .1rem;
-    }
-    .executive-name{
+    .sermons-gridEl p{
+        margin: 0 0 1.5rem;
         font-size: 1rem;
     }
-    .executive-position{
-        font-size: .8rem;
+    .sermons-gridEl a{
+        font-size: .9rem;
     }
-    .footer-txt{
+
+    /* The Departments Section */
+    .departments{
+        padding: 3rem 6rem 0;
+    }
+    .departments-heading{
+        margin: 1rem 0 0;
+        font-size: xx-large;
+    }
+    .departments-grid{
+        margin: 1.5rem 0 0;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 2rem;
+    }
+    .departments-gridEl{
+        margin: 0 0;
+    }
+    .departments-gridEl h3{
+        margin: 1.5rem 0 1rem;
         font-size: 1.2rem;
     }
-    .footer-txt i{
-        font-size: 1.2rem;
+    .departments-gridEl p{
+        margin: 0 0 1.2rem;
+        font-size: 1rem;
+        padding: 0 1.5rem;
     }
 }
