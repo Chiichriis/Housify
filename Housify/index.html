@@ -4,164 +4,337 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGC Bukuru</title>
-    <link rel="stylesheet" href="Swiper/swiper-bundle.min.css"/>
+    <title>Housify</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="Swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
-<body id="home">
-    <header class="header">
-        <div class="header-logo">
-            <img src="images/logo.png" alt="AGC_Logo">
-        </div>
-        <div class="header-menu">
-            <input type="checkbox" class="toggle">
-            <div class="hamburger"><div></div></div>
-            <div class="nav">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sermons">Sermons</a></li>
-                    <li><a href="#departments">Departments</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#church">The Church</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+<body>
 
-    <!-- Swiper -->
-    <div class="swiper mySwiper" >
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/church.jpg" alt="">
-                <div class="slider-txt">
-                    <h1 class="home-header">Assemblies of God Church, The Jerusalem Assembly.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore doloribus quis adipisci quod officia aliquam, praesentium libero nisi nesciunt doloremque..</p>
-                    <div class="btn-container">
-                        <button class="active">Sermons</button>
-                        <button>The Church</button>
-                    </div>
+    <section class = "home" id="home">
+        <div class="header">
+            <div class="menu">
+                <input type="checkbox" class="toggle">
+                <div class="hamburger"><div></div></div>
+                <div class="nav">
+                    <ul class="navigation">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Digital Product</a></li>
+                        <li><a href="#metapoll">Meta Poll</a></li>
+                        <li><a href="#housify">Housify</a></li>
+                        <li><a href="#companies">Our Companies</a></li>
+                        <li><a href="#executives">Executives</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="swiper-slide">
-                <img src="images/bible.jpg" alt="">
-                <div class="slider-txt">
-                    <h1>Bible Study & Foundation Class.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit labore optio rerum voluptatem! Sequi soluta accusamus odio quam porro voluptatum!</p>
-                    <div class="btn-container">
-                        <button >Teachings</button>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/prayerMeeting.jpg" alt="">
-                <div class="slider-txt">
-                    <h1>Supplication & Prayer Meetings.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum atque reprehenderit ea impedit blanditiis id quos quae voluptas adipisci at?</p>
-                    <div class="btn-container">
-                        <button>Request</button>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/Evangelism.jpg" alt="">
-                <div class="slider-txt">
-                    <h1>Evangelism & Outreaches.</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse exercitationem suscipit maiores assumenda ipsum consectetur quis sit, ullam distinctio totam?</p>
-                    <div class="btn-container">
-                        <button>Support</button>
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <img src="images/worship.jpg" alt="">
-                <div class="slider-txt">
-                    <h1>Worship & Praises.</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. A atque doloribus nostrum cupiditate magni earum ducimus sunt soluta quas explicabo.</p>
-                    <div class="btn-container">
-                        <button>Listen</button>
-                    </div>
-                </div>
-            </div>
+            <p class="heading"><b>The LegacyEA</b> Company</p>
+            <img src="images/LegacyEA Logo.png" alt="">
         </div>
-        <div class="swiper-pagination"></div>
-    </div>
 
-    <section class="sermons" id="sermons">
-        <h1 class="sermons-heading">SERMONS</h1>
-        <div class="sermons-grid">
-            <div class="sermons-gridEl">
-                <h3>The kingdom of Heaven.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto et corporis accusantium sapiente beatae hic!</p>
-                <a href="#">Click now to Listen</a>
-            </div>     
-            <div class="sermons-gridEl">
-                <h3>Understanding God's Love.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis deleniti animi cupiditate sapiente quasi!</p>
-                <a href="#">Click now to Listen</a>
-            </div> 
-            <div class="sermons-gridEl">
-                <h3>The Fruits of the Holy Spirit.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto et corporis accusantium sapiente beatae hic!</p>
-                <a href="#">Click now to Listen</a>
-            </div>     
-            <div class="sermons-gridEl">
-                <h3>Fatherhood & Sonship.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo omnis deleniti animi cupiditate sapiente quasi!</p>
-                <a href="#">Click now to Listen</a>
-            </div> 
-            <div class="sermons-gridEl">
-                <h3>The Blood and The Cross.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam quo consequatur eos cupiditate veritatis.</p>
-                <a href="#">Click now to Listen</a>
-            </div>     
-            <div class="sermons-gridEl">
-                <h3>MORE...</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae consequuntur aperiam quaerat tempora perferendis. Quis.</p>
-                <a href="#">Click now for more</a>
-            </div> 
+        <div class="jumbotron">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-content item1">
+                            <h1>Remodelling the Universe.</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content item2">
+                            <h1>Connected Solutions.</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content item3">
+                            <h1>Immersive Technology.</h1>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-content item4">
+                            <h1>Simplifying Data.</h1>
+                        </div>
+                    </div>
+                 
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+        </div>
+
+        <div class="section-paragraph">
+            <p>
+                We are a new generation company providing high-demand digital-tech solutions for startups, individuals and organizations in Africa.
+            </p>
+            <p>
+                We are at the frontline of Africa's technological advancements and digital inventions.  Our offerings cover Smart Property Management, Web 3 and Blockchain Technology, Digital Art Creations, Socio-Digital Marketplace.
+            </p>
         </div>
     </section>
 
-    <section class="departments" id="departments">
-        <h1 class="departments-heading">Departments</h1>
-        <div class="departments-grid">
-            <div class="departments-gridEl">
-                <img src="images/prayerMeeting.jpg" alt="">
-                <h3>The Men's Department</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae perspiciatis laborum sit libero eaque incidunt repellat deserunt porro natus provident!</p>
+    <section class="digital-product" id="product">
+
+        <div class="section-header">
+            <h1>Our Digital Product</h1>
+            <p>What we are Building</p>
+        </div>
+        <div class="product-section butterfly">
+            <img src="images/butterfly-06.png" alt="">
+            <h3>Butterfly</h3>
+            <p>Butterfly is a socio-digital marketplace that provides opportunities for both skilled and unskilled labour. Butterfly connects craftsmen, creators, curators to clients, employees etc.</p>
+        </div>
+        <div class="grid-container">
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/digital icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Digital & Flexible</h4>
+                    <p>Butterfly is digital and flexible, it offers both remote and onsite work opportunities.</p>
+                </div>
             </div>
-            <div class="departments-gridEl">
-                <img src="images/womens dept.jpg" alt="">
-                <h3>The Women's Department</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt accusamus repellendus ex culpa unde commodi odio qui expedita aperiam officiis.</p>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/Disruptive icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Disruptive</h4>
+                    <p>The First of its kind in Africa, offering skilled and unskilled job opportunities, covers B2B, B2C P2P business strategies.</p>
+                </div>
             </div>
-            <div class="departments-gridEl">
-                <img src="images/worship.jpg" alt="">
-                <h3>The Youth's Department</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatum laboriosam enim accusantium, inventore excepturi quam optio. Id, distinctio ratione?</p>
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/secured icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Highly Secured</h4>
+                    <p>Butterfly offers a highly secured environment for transactions and secures user data. </p>
+                </div>
             </div>
-            <div class="departments-gridEl">
-                <img src="images/teenages dept.jpg" alt="">
-                <h3>The Teenagers's Department</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quae dolorem delectus iusto minus blanditiis fugit dolor recusandae magni pariatur.</p>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/jobs icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Over 10 Million Jobs/yr</h4>
+                    <p>Over 10 Million jobs and contracts can be initiated per annum </p>
+                </div>
             </div>
-            <div class="departments-gridEl">
-                <img src="images/children dept.jpg" alt="">
-                <h3>The Children's Department</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo amet laudantium sequi similique soluta unde facilis minima saepe, rem aperiam.</p>
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/fast & responsive icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Fast & Responsive</h4>
+                    <p>Butterfly offers a highly secured environment for transactions and secures users data.</p>
+                </div>
             </div>
-            <div class="departments-gridEl">
-                <img src="images/Sunday skul.jpg" alt="">
-                <h3>The Sunday's School</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis possimus ullam nisi veniam cupiditate blanditiis consequatur officiis, aspernatur accusamus odio!.</p>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/money icon.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>$100,000,000</h4>
+                    <p>Over $100m transactions processed per year.</p>
+                </div>
             </div>
+        </div>
+        <div class="section-btn">
+            <a href="#deck"><button class="btn">View Deck</button></a>
+        </div>
+    </section>
+    
+    <section class="digital-product metapoll-section" id="metapoll">
+        <div class="product-section metapoll">
+            <img src="images/meta poll.svg" alt="">
+            <h3>MetaPoll</h3>
+            <p>MetaPoll is an eVoting Platform on blockchain which conducts polls for organizations, nations and institutions. </p>
+        </div>
+        <div class="grid-container metapoll-grid">
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/metapoll secure.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>High Level Security</h4>
+                    <p>MetaPoll Provides a very high level of security of user data. Metapoll runs on Blockchain.</p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/metapoll live result.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Live Results</h4>
+                    <p>MetaPoll provides real time charts of voters input. Results are seen live as they vote.</p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/metapoll multiple polls.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Multiple Polls</h4>
+                    <p>Thousands of Polls can be conducted on MetaPoll at the same time. </p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/metapoll easy to read.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Easy-to-read Infographs</h4>
+                    <p>Results are shown in simple infographs which are easy and transparent for the public to interpret. </p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-up">
+                <div class="gridEl-img">
+                    <img src="images/metapoll low cost.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Low Cost, Zero Risk</h4>
+                    <p>Nations spend millions of dollars to run polls MetaPoll makes it possible for users to conduct elections at low cost. Voters bear zero or no risk. Their bio-data is anonymous. They vote from the comfort of their bedrooms. </p>
+                </div>
+            </div>
+        </div>
+        <div class="section-btn">
+            <a href="#deck"><button class="btn">View Deck</button></a>
+        </div>
+    </section>
+    
+    <section class="digital-product housify-section" id="housify">
+        <div class="product-section housify">
+            <img src="images/Housify_Logo.png" alt="">
+            <p>Housify is a user-friendly platform that links users to house owners. Housify allows consumers to search for and book acceptable and cheap homes without having to go through the hassle of a survey or face-to-face communication. </p>
+        </div>
+        <div class="grid-container housify-grid">
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/cargo housing.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Cargo housing</h4>
+                    <p>Housify offers minimalist container housing for students and densely populated areas. Houses are eco-friendly, aligned to UN SDGs 13 & 15. </p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/market value.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>$36B Market value</h4>
+                    <p>Housify is penetrating into a viable niche worth over 36B (USD). A Market-ready niche with over 660million students across 700 countries in Africa.</p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-right">
+                <div class="gridEl-img">
+                    <img src="images/housing insurance.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Housing Insurance</h4>
+                    <p>Housify offers housing insurance to users provides great utilities, people can find good houses, offices, studios, halls, lands etc on Housify It's Hassle-Free and risk minimizing.</p>
+                </div>
+            </div>
+            <div class="gridEl" data-aos="fade-left">
+                <div class="gridEl-img">
+                    <img src="images/h-disruptive.svg" alt="">
+                </div>
+                <div class="gridEl-txt">
+                    <h4>Disruptive</h4>
+                    <p>The First of its kind in Africa offering  housing solutions for students, individuals, organizations etc. Housify makes it easy for people to find good stays around them with just a click.</p>
+                </div>
+            </div>
+        </div>
+        <div class="section-btn">
+            <a href="#deck"><button class="btn">View Deck</button></a>
+        </div>
+    </section>
+
+    <section class="digital-product our-companies" id="companies">
+
+        <div class="section-header">
+            <h1>Our Companies</h1>
+            <p>Startups we are Building</p>
+        </div>
+        <div class="product-section playboo">
+            <img src="images/Playbook-01 1.svg" alt="">
+            <p><b>PlayBooq</b> is a design oriented company, providing digital  arts and illustrations. Our offerings include brand identity user-interface designs, product designs, vectors and illutsrations,  animations, as well as digital tokens (NFTs). PlayBooq currently has a creative community - <b>Graphics Republique</b> with over 11,000 creatives connected across the globe.</p>
+            <div class="handles">
+                <a href="http://www.instagram.com/playbooq.design"><i class="fab fa-instagram"></i></a>
+                <a href="http://wa.me/2348122663593"><i class="fab fa-whatsapp"></i></a>
+                <a href="http://www.facebook.com/playbooq.design"><i class="fab fa-facebook-f"></i></a>
+                <a href="http://www.linkedin.com/company/playbooqdesign"><i class="fab fa-linkedin-in"></i></a>
+                <a href="www.playbooq.create@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="product-section spacebox">
+            <img src="images/SpaceBox Tech-02 1.svg" alt="">
+            <p><b>SpaceBox Technologies</b> is a Web3 Tech Startup, helping other startups upscale by offering web3, blockchain, and other nascent tech solutions.</p>
+            <div class="handles">    
+                <a href="explore.spacebox@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="http://www.linkedin.com/company/spacebox-technologies"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+       
+    </section>
+
+    <section class="executive-section" id="executives">
+        <h4>Executive Team</h4>
+        <div class="section-wrapper">
+            <div class="sectionEl">
+                <img src="images/Peterson.jpg" alt="">
+                <div class="sectionEl-txt">
+                    <p>AKODI <b>PETERSON</b></p>
+                    <P>Founder</P>
+                    <P>CEO</P>
+                </div>
+            </div>
+            <div class="sectionEl">
+                <img src="images/Evangel.jpg" alt="">
+                <div class="sectionEl-txt">
+                    <p>CHIDIEBUBE <b>EVANGEL</b></p>
+                    <P>Co-Founder</P>
+                    <P>CTO</P>
+                </div>
+            </div>
+            <div class="sectionEl">
+                <img src="images/sir eric.jpg" alt="">
+                <div class="sectionEl-txt">
+                    <p>LIMOH M. <b>ERIC</b></p>
+                    <P>Business Dev.</P>
+                    <P>COO</P>
+                </div>
+            </div>
+            <div class="sectionEl">
+                <img src="images/max.jpg" alt="">
+                <div class="sectionEl-txt">
+                    <p>ABEL MAX <b>EJIOFOR</b></p>
+                    <P>HR Manager &</P>
+                    <P>Strategiest</P>
+                </div>
+            </div>
+        </div>
+        <div class="footer" >
+            <a href="info.legacyea@gmail.com"><i class="fas fa-envelope"></i></a>
+            <p>(C) The LegacyEA Company</p>
         </div>
     </section>
 
 
 
 
+
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000
+        });
+    </script>
     <script src="Swiper/swiper-bundle.min.js"></script>
     <script src="index.js"></script>
 </body>
